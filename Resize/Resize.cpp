@@ -7,13 +7,13 @@ using namespace std;
 void Resize(Mat,int,int);
 int main()
 {
-  Mat image1 = imread("C:/Users/labuser/Desktop/AnoopDIP/Resize/test.jpg");
+  Mat image1 = imread("C:/Users/labuser/Desktop/AnoopDIP//DIP/Resize/test.jpg");
 if (image1.empty()) {
     cout << "Cannot open image!" << endl;
     return 1;
   }
 
- Resize(image1,640,360);
+ Resize(image1,440,360);
 
 }
 
@@ -33,7 +33,7 @@ for(int i=0;i<height-h_factor-1;i=i+h_factor){
     n=0;
 }
 
-imwrite("C:/Users/labuser/Desktop/AnoopDIP/Resize/resized.jpg",imgR);
+imwrite("C:/Users/labuser/Desktop/AnoopDIP/DIP/Resize/resized.jpg",imgR);
 namedWindow( "Show", CV_WINDOW_AUTOSIZE );
 imshow("Show",imgR);
 waitKey(0);
