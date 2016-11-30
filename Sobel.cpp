@@ -8,7 +8,7 @@ void Sobel(Mat);
 Mat Gray(Mat);
 int main()
 {
-  Mat image = imread("C:/Users/Manoj/Desktop/AnoopDIP/DIP/Sobel/test.jpg");
+  Mat image = imread("C:/Users/Manoj/Desktop/AnoopDIP/DIP/Sobel/test.bmp");
 if (image.empty()) {
     cout << "Cannot open image!" << endl;
     return 1;
@@ -42,12 +42,12 @@ for(int i=1;i<height-1;i++){
 
 
 
-       grayimg.at<uchar>(i, j)=sqrt(sumx*sumx+sumy*sumy);
+       grayimg.at<uchar>(i-1, j-1)=sqrt(sumx*sumx+sumy*sumy);
     }
 
 }
 
-imwrite("C:/Users/Manoj/Desktop/AnoopDIP/DIP/Sobel/SibleR.jpg",grayimg);
+imwrite("C:/Users/Manoj/Desktop/AnoopDIP/DIP/Sobel/SibleR.bmp",grayimg);
 namedWindow( "Show", CV_WINDOW_AUTOSIZE );
 imshow("Show",grayimg);
 waitKey(0);
